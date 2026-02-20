@@ -1,4 +1,3 @@
-# Postdoctoral Technical Challenge — AlfaisalX / MedX Research Unit
 ## Medical Imaging Classification, Visual Language Models
 
 **Author:** Irshad Khan | 
