@@ -57,8 +57,8 @@ python compare_models.py                            # compare all
 
 ```
 outputs/
-├── efficientnet/
-│   ├── best_model.pth
+├── Model_Name(e.g., efficientnet)/
+│   ├── best_model.pth               # missing for vit due to large size.
 │   ├── training_history.json
 │   ├── test_metrics.json
 │   ├── training_curves.png
@@ -68,8 +68,8 @@ outputs/
 │   ├── confidence_distribution.png
 │   └── sample_predictions.png
 ├── resnet/           ← same structure
-├── custom_cnn/       ← same structure
 └── model_comparison.png
+└── auc_comparison.png    
 ```
 
 ### Adding a New Model
