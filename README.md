@@ -9,40 +9,9 @@
 ---
 
 ## Repository Structure
+#Folders:
+Classification: 
 
-```
-repository/
-├── data/
-│   ├── __init__.py
-│   └── dataset.py              ← PneumoniaMNIST pipeline (transforms, loaders, class weights)
-├── models/
-│   ├── __init__.py
-│   ├── registry.py             ← Model registry — swap models with one line
-│   ├── efficientnet.py         ← EfficientNet-B0 (recommended)
-│   ├── resnet.py               ← ResNet-18 (baseline)
-│   └── custom_cnn.py           ← Custom CNN from scratch (lower bound)
-├── task1_classification/
-│   ├── train.py                ← CLI training script
-│   ├── evaluate.py             ← CLI evaluation script
-│   └── compare_models.py       ← Side-by-side model comparison
-├── task2_report_generation/    ← [Task 2]
-├── task3_retrieval/            ← [Task 3]
-├── notebooks/
-│   ├── 01_data_analysis.ipynb  ← EDA — run first
-│   ├── 02_train.ipynb          ← Training — change MODEL_NAME to swap model
-│   └── 03_evaluate.ipynb       ← Evaluation + comparison — run last
-├── reports/
-│   ├── task1_classification_report.md
-│   └── outputs/                ← Generated plots
-│       ├── efficientnet/       ← Plots for EfficientNet-B0
-│       ├── resnet/             ← Plots for ResNet-18
-│       ├── custom_cnn/         ← Plots for Custom CNN
-│       └── model_comparison.png
-├── requirements.txt
-└── README.md
-```
-
----
 
 ## Task 1: CNN Classification
 
