@@ -17,9 +17,9 @@ Classification:
 
 ### Quick Start — Google Colab (Recommended)
 
-1. Open `notebooks/01_data_analysis.ipynb` → explore the dataset
+1. Open `notebooks/01_data_analysis.ipynb` → explore the dataset and analyze the results are available in data_analysis folder
 2. Open `notebooks/02_train.ipynb` → set `MODEL_NAME`, train
-3. Open `notebooks/03_evaluate.ipynb` → evaluate + compare all models
+3. Open `notebooks/03_evaluate.ipynb` → evaluate each model, + compare all models
 
 Each notebook is **self-contained** — it clones the repo and imports `.py` modules automatically.
 
