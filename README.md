@@ -90,13 +90,8 @@ MODEL_REGISTRY = {
 
 3. Use it: `python train.py --model your_model`
 
-### Expected Results
-
-| Model | Accuracy | AUC | Recall | Training Time (T4) |
-|-------|----------|-----|--------|--------------------|
-| EfficientNet-B0 | ~0.90–0.93 | ~0.95–0.97 | ~0.92–0.96 | ~15–20 min |
-| ResNet-18 | ~0.87–0.91 | ~0.93–0.96 | ~0.90–0.94 | ~12–18 min |
-| Custom CNN | ~0.82–0.87 | ~0.88–0.93 | ~0.85–0.90 | ~10–15 min |
+### Results
+See Task1 and Task2 reports
 
 ---
 
