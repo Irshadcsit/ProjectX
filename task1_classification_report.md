@@ -1,12 +1,8 @@
-\# Task 1 — Pneumonia Classification
+# Task 1 — Pneumonia Classification
 
+## 1. Dataset Analysis
 
-
-\## 1. Dataset Analysis
-
-
-
-\### 1.1 Dataset Description
+### 1.1 Dataset Description
 
 
 
@@ -14,7 +10,7 @@ This project uses the \*\*PneumoniaMNIST\*\* dataset from the MedMNIST benchmark
 
 
 
-\- \*\*Class 0\*\*: Normal
+*\*Class 0\*\*: Normal
 
 \- \*\*Class 1\*\*: Pneumonia
 
