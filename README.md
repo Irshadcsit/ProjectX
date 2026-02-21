@@ -1,7 +1,10 @@
 ## Medical Imaging Classification, Visual Language Models
 
 **Author:** Irshad Khan | 
+Main Notebook:
+[![Open Main Notebook in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/Main_notebook.ipynb)
 
+Check Individual:
 [![Open Data Analysis in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_data_analysis.ipynb)
 
 [![Open Classifier Training in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_train_classifier.ipynb)
