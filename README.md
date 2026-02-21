@@ -1,57 +1,28 @@
-# Postdoctoral Technical Challenge — AlfaisalX / MedX Research Unit
 ## Medical Imaging Classification, Visual Language Models
 
 **Author:** Irshad Khan | 
 
-[![Open Data Analysis in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/01_data_analysis.ipynb)
-[![Open Training in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/02_train.ipynb)
-[![Open Evaluation in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/03_evaluate.ipynb)
+[![Open Data Analysis in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_data_analysis.ipynb)
+
+[![Open Classifier Training in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_train_classifier.ipynb)
+
+[![Open Classifier Evaluation in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_evaluate_classifier.ipynb)
+
 
 ---
 
 ## Repository Structure
+#Folders:
+Classification: 
 
-```
-repository/
-├── data/
-│   ├── __init__.py
-│   └── dataset.py              ← PneumoniaMNIST pipeline (transforms, loaders, class weights)
-├── models/
-│   ├── __init__.py
-│   ├── registry.py             ← Model registry — swap models with one line
-│   ├── efficientnet.py         ← EfficientNet-B0 (recommended)
-│   ├── resnet.py               ← ResNet-18 (baseline)
-│   └── custom_cnn.py           ← Custom CNN from scratch (lower bound)
-├── task1_classification/
-│   ├── train.py                ← CLI training script
-│   ├── evaluate.py             ← CLI evaluation script
-│   └── compare_models.py       ← Side-by-side model comparison
-├── task2_report_generation/    ← [Task 2]
-├── task3_retrieval/            ← [Task 3]
-├── notebooks/
-│   ├── 01_data_analysis.ipynb  ← EDA — run first
-│   ├── 02_train.ipynb          ← Training — change MODEL_NAME to swap model
-│   └── 03_evaluate.ipynb       ← Evaluation + comparison — run last
-├── reports/
-│   ├── task1_classification_report.md
-│   └── outputs/                ← Generated plots
-│       ├── efficientnet/       ← Plots for EfficientNet-B0
-│       ├── resnet/             ← Plots for ResNet-18
-│       ├── custom_cnn/         ← Plots for Custom CNN
-│       └── model_comparison.png
-├── requirements.txt
-└── README.md
-```
-
----
 
 ## Task 1: CNN Classification
 
 ### Quick Start — Google Colab (Recommended)
 
-1. Open `notebooks/01_data_analysis.ipynb` → explore the dataset
+1. Open `notebooks/01_data_analysis.ipynb` → explore the dataset and analyze the results are available in data_analysis folder
 2. Open `notebooks/02_train.ipynb` → set `MODEL_NAME`, train
-3. Open `notebooks/03_evaluate.ipynb` → evaluate + compare all models
+3. Open `notebooks/03_evaluate.ipynb` → evaluate each model, + compare all models
 
 Each notebook is **self-contained** — it clones the repo and imports `.py` modules automatically.
 
@@ -89,8 +60,8 @@ python compare_models.py                            # compare all
 
 ```
 outputs/
-├── efficientnet/
-│   ├── best_model.pth
+├── Model_Name(e.g., efficientnet)/
+│   ├── best_model.pth               # missing for vit due to large size.
 │   ├── training_history.json
 │   ├── test_metrics.json
 │   ├── training_curves.png
@@ -100,8 +71,8 @@ outputs/
 │   ├── confidence_distribution.png
 │   └── sample_predictions.png
 ├── resnet/           ← same structure
-├── custom_cnn/       ← same structure
 └── model_comparison.png
+└── auc_comparison.png    
 ```
 
 ### Adding a New Model
@@ -122,13 +93,8 @@ MODEL_REGISTRY = {
 
 3. Use it: `python train.py --model your_model`
 
-### Expected Results
-
-| Model | Accuracy | AUC | Recall | Training Time (T4) |
-|-------|----------|-----|--------|--------------------|
-| EfficientNet-B0 | ~0.90–0.93 | ~0.95–0.97 | ~0.92–0.96 | ~15–20 min |
-| ResNet-18 | ~0.87–0.91 | ~0.93–0.96 | ~0.90–0.94 | ~12–18 min |
-| Custom CNN | ~0.82–0.87 | ~0.88–0.93 | ~0.85–0.90 | ~10–15 min |
+### Results
+See Task1 and Task2 reports
 
 ---
 
