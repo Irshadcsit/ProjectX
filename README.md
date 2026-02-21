@@ -29,8 +29,8 @@ Each notebook is **self-contained** — it clones the repo and imports `.py` mod
 ### Local Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone 'https://github.com/Irshadcsit/ProjectX.git'
+cd ProjectX
 pip install -r requirements.txt
 ```
 
