@@ -5,11 +5,11 @@ Main Notebook:
 [![Open Main Notebook in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/Main_notebook.ipynb)
 
 Check Individual:
-[![Open Data Analysis in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_data_analysis.ipynb)
+[![Open Data Analysis in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_data_analysis.ipynb)
 
-[![Open Classifier Training in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_train_classifier.ipynb)
+[![Open Classifier Training in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_train_classifier.ipynb)
 
-[![Open Classifier Evaluation in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/master/01_evaluate_classifier.ipynb)
+[![Open Classifier Evaluation in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_evaluate_classifier.ipynb)
 
 
 ---
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 Change one variable in any notebook or script:
 
 ```python
-# notebooks/02_train.ipynb  ─  Cell 3
+# 01_train_classifier.ipynb  ─  Cell 3
 MODEL_NAME = 'efficientnet'   # ← change to 'resnet' or 'custom_cnn'
 ```
 
