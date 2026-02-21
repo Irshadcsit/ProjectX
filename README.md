@@ -2,9 +2,9 @@
 
 **Author:** Irshad Khan | 
 
-[![Open Data Analysis in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/01_data_analysis.ipynb)
-[![Open Training in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/02_train.ipynb)
-[![Open Evaluation in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/03_evaluate.ipynb)
+[![Open Data Analysis in Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_data_analysis.ipynb)
+[![Open Classifier Training in Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_train_classifier.ipynb)
+[![Open Classifier Evaluation in Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/notebooks/](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_evaluate_classifier.ipynb)
 
 ---
 
