@@ -4,6 +4,7 @@
 Main Notebook:
 [![Open Main Notebook in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/Main_notebook.ipynb)
 
+### Tas1:
 Check Individual:
 [![Open Data Analysis in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_data_analysis.ipynb)
 
@@ -11,7 +12,8 @@ Check Individual:
 
 [![Open Classifier Evaluation in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_evaluate_classifier.ipynb)
 
-
+### Task2:
+[![Open Classifier Evaluation in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/task2_local.ipynb)
 ---
 
 ## Repository Structure
