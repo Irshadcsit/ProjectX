@@ -73,7 +73,10 @@ def print_metrics(metrics: dict, model_name: str):
     print(f"  TEST RESULTS — {model_name}")
     print(f"{'='*46}")
     for k, v in metrics.items():
-        print(f"  {k.capitalize():12s}: {v:.4f}")
+        if isinstance(v, float):
+            print(f"  {k.capitalize():12s}: {v:.4f}")
+        else:
+            print(f"  {k.capitalize():12s}: {v}")
     print(f"{'='*46}\n")
 
 
