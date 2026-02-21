@@ -16,9 +16,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-MODELS      = ["efficientnet", "resnet", "custom_cnn"]
+MODELS      = ["efficientnet", "resnet", "custom_cnn","vit"]
 METRICS     = ["accuracy", "precision", "recall", "f1", "auc"]
-COLORS      = ["#2196F3", "#4CAF50", "#FF9800"]
+COLORS      = ["#2196F3", "#4CAF50", "#FF9800","#9C27B0" ]
 OUTPUT_DIR  = os.path.join(os.path.dirname(__file__), "..", "outputs")
 
 
