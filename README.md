@@ -13,7 +13,7 @@ Check Individual:
 [![Open Classifier Evaluation in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/01_evaluate_classifier.ipynb)
 
 ### Task2:
-[![Open in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/task2_colab.ipynb)
+[![Open Report Generation using VLLM in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/task2_colab_new.ipynb)
 ---
 
 ## Repository Structure
