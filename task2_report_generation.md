@@ -70,27 +70,23 @@ LIMITATION: [note any limitations due to image quality]
 | S2 Structured | Medium | Good | Medium | No |
 | S3 Guided Clinical | High | Excellent | High | **Yes** |
 
+<img src="outputs/task2/prompting comparison.png" alt="Prompting Comparison"/>
 
 **Normal image:**
 - `S1_basic` (5.8s): The chest X-ray image shows a clear view of the lungs and the ribcage. There are no signs of pneumonia visible in the image. The lungs appear to be he...
 - `S2_structured` (9.6s): 1. FINDINGS: The chest X-ray shows a clear cardiac silhouette, indicating a healthy heart. The lung fields appear to be clear, with no visible abnorma...
 - `S3_guided_clinical` (11.0s): FINDINGS: The image shows a blurry chest X-ray with low resolution. The lungs are not clearly visible, and there are no distinct signs of pneumonia.
-
 ...
-
 **Pneumonia image:**
 - `S1_basic` (6.2s): The chest X-ray image shows a close-up view of the ribcage and lungs. The lungs appear to be clear, with no visible signs of pneumonia. The ribcage is...
 - `S2_structured` (12.7s): 1. FINDINGS: The chest X-ray shows a clear cardiac silhouette, indicating a normal heart position. The lung fields appear to be clear, with no signs o...
 - `S3_guided_clinical` (9.6s): FINDINGS: The image shows a close-up view of the chest, with the rib cage and lungs visible. The lungs appear to be clear, with no signs of pneumonia....
-
-
 ---
-
 ## 3. Sample Generated Reports (12 Images)
 
 Images are categorized as: True Normal, True Pneumonia, False Positive (CNN error), False Negative (CNN error).
 
-![All Reports Grid](../outputs/task2/all_reports_grid.png)
+<img src="outputs/task2/all_reports_grid.png" alt="All report Grids"/>
 
 
 #### img_0501 — True Normal
@@ -316,7 +312,7 @@ LIMITATION: The low-resolution nature of the image may limit the accuracy of the
 
 ### CNN vs VLM Prediction Agreement
 
-![Agreement Chart](../outputs/task2/cnn_vlm_agreement.png)
+<img src="outputs/task2/cnn_vlm_agreement.png.png" alt="CNN VS VLM"/>
 
 | Agreement Category | Count | Interpretation |
 |--------------------|-------|----------------|
@@ -343,22 +339,22 @@ LIMITATION: The low-resolution nature of the image may limit the accuracy of the
 ### Strengths
 
 - **Explainability:** Unlike CNN classifiers, VLM reports provide human-readable reasoning, which is critical for clinical trust and regulatory approval.
-- **Zero-shot capability:** No fine-tuning on PneumoniaMNIST was required — the model generalizes from medical pretraining.
+- **Zero-shot capability:** No fine-tuning on PneumoniaMNIST was required, the model generalizes from medical pretraining.
 - **Uncertainty awareness:** The LIMITATION section in S3 outputs shows the model appropriately recognizes image quality constraints rather than making overconfident predictions.
 - **Complementary to CNN:** The 1 case(s) where VLM corrected CNN errors demonstrates that ensemble approaches (CNN + VLM) could outperform either alone.
 
 ### Limitations
-
 - **Resolution sensitivity:** 28×28 images are far below clinical standards. VLM performance would be substantially better on full-resolution DICOM images.
-- **No quantitative validation:** VLM outputs are evaluated qualitatively. For clinical deployment, reports would need validation against radiologist gold standards using structured NLP metrics (BLEU, ROUGE, BERTScore, RadGraph F1).
+- **No quantitative validation:** VLM outputs are evaluated qualitatively. For clinical deployment, reports would need validation against radiologist gold standards using structured NLP metrics (BLEU, ROUGE, RAGAS).
 - **Hallucination risk:** VLMs can describe findings that are not visible in the image. The REASONING section helps detect this but does not eliminate it.
-- **Inference speed:** Report generation takes 10.9s per image on average — acceptable for research but too slow for real-time clinical workflows without optimization.
+- **Inference speed:** Report generation takes 10.9s per image on average, acceptable for research but too slow for real-time clinical workflows without optimization.
 - **Grayscale-to-RGB conversion:** PneumoniaMNIST images are grayscale replicated to RGB for VLM input, which may introduce subtle artifacts.
 
-### Future Improvements
+### Conclusion:
+Due to time and resource constraints, further evaluation was not conducted. We attempted to load MedGemma, but encountered repeated errors likely related to gated access permissions or quantization issues. As a result, we proceeded with LLaVA‑1.5‑7B as the primary model. Additionally, configuring the model and managing GPU utilization in Colab proved challenging, as GPU availability varied over time.
 
-1. **Higher resolution inputs:** Use 224×224 MedMNIST images for substantially better VLM performance
-2. **Fine-tuning:** Fine-tune MedGemma on radiology report datasets (e.g., MIMIC-CXR) for clinical terminology alignment
-3. **NLP metrics:** Add BLEU, ROUGE-L, BERTScore, and RadGraph F1 against reference reports for quantitative evaluation
-4. **Ensemble:** Combine CNN confidence score with VLM diagnosis in a final decision module
-5. **Human evaluation:** Recruit radiologists to score VLM reports on accuracy, completeness, and clinical usefulness
+1. **Higher resolution inputs:** Use 224×224 MedMNIST images for substantially better VLM performance.
+2. **Fine-tuning:** Fine-tune MedGemma on radiology report datasets (e.g., MIMIC-CXR) for clinical terminology alignment.
+3. **NLP metrics:** Incorporate BLEU and ROUGE‑L scores against reference reports for quantitative evaluation, potentially using other models as judge models. 
+4. **Ensemble:** Combine CNN confidence score with VLM diagnosis in a final decision module.
+5. **Human evaluation:** Recruit radiologists to assess VLM reports for accuracy, completeness, and clinical usefulness, ensuring a human‑in‑the‑loop validation process.
