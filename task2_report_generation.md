@@ -311,7 +311,7 @@ LIMITATION: The low-resolution nature of the image may limit the accuracy of the
 
 ### CNN vs VLM Prediction Agreement
 
-<img src="outputs/task2/cnn_vlm_agreement.png.png" alt="CNN VS VLM"/>
+<img src="outputs/task2/cn_vs_llm.png" alt="CNN VS VLM"/>
 
 | Agreement Category | Count | Interpretation |
 |--------------------|-------|----------------|
