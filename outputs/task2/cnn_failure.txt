@@ -1,0 +1,47 @@
+=== CNN FAILURE CASE ANALYSIS ===
+
+────────────────────────────────────────────────────────────
+Image:     img_0565
+Category:  False Positive
+GT:        Normal
+CNN pred:  Pneumonia ✗ (wrong)
+VLM pred:  Pneumonia ✗
+VLM Report:
+  FINDINGS: The image shows a chest X-ray of a pediatric patient. The lungs are mostly clear, with some small patches of infiltrates. The heart is visible, and there is no clear evidence of pneumonia.
+
+  DIAGNOSIS: Uncertain
+
+  REASONING: The image shows some small patches of infiltrates, which could be indicative of pneumonia. However, the overall lung clarity is mostly clear, and there is no clear evidence of pneumonia. The heart is visible, which is a positive sign.
+
+  LIMITATION: The image quality is low-resolution, which might make it difficult to accurately diagnose pneumonia.
+
+────────────────────────────────────────────────────────────
+Image:     img_0378
+Category:  False Positive
+GT:        Normal
+CNN pred:  Pneumonia ✗ (wrong)
+VLM pred:  Normal ✓
+VLM Report:
+  FINDINGS: The image shows a chest X-ray of a pediatric patient. The lungs appear to be clear, with no visible signs of pneumonia.
+
+  DIAGNOSIS: Normal
+
+  REASONING: The image shows clear lungs with no signs of pneumonia. The low-resolution nature of the image may limit the accuracy of the diagnosis.
+
+  LIMITATION: The image quality is not high enough to confidently rule out the possibility of pneumonia.
+
+────────────────────────────────────────────────────────────
+Image:     img_0148
+Category:  False Negative
+GT:        Pneumonia
+CNN pred:  Normal ✗ (wrong)
+VLM pred:  Normal ✗
+VLM Report:
+  FINDINGS: The image shows a clear view of the chest area, including the lungs and the ribcage. The lungs appear to be clear and well-defined, with no visible signs of pneumonia.
+
+  DIAGNOSIS: Normal
+
+  REASONING: The lungs are clearly visible and appear to be unobstructed, with no signs of inflammation or infection. The ribcage is also clearly visible, which is essential for accurate diagnosis. The low-resolution nature of the image may limit the accuracy of the diagnosis, but the lack of any visible signs of pneumonia supports a normal diagnosis.
+
+  LIMITATION: The low-resolution nature of the image may limit the accuracy of the diagnosis, and it may be difficult to detect subtle signs of pneumonia.
+
