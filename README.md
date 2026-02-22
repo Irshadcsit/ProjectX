@@ -1,7 +1,12 @@
 ## Medical Imaging Classification, Visual Language Models
 
-**Author:** Irshad Khan | 
+**Author:** Irshad Khan  
+
 Main Notebook:
+For a quick review, you can open the main notebook directly in Colab.
+For a comprehensive evaluation, I recommend running each notebook individually: 
+Task 1 can be executed either in Colab or on a local machine, 
+while Task 2 requires GPU resources, so Colab is the preferred option.
 [![Open Main Notebook in Colab]](https://colab.research.google.com/github/Irshadcsit/ProjectX/blob/main/Main_notebook.ipynb)
 
 ### Tas1:
@@ -24,10 +29,9 @@ Classification:
 ## Task 1: CNN Classification
 
 ### Quick Start — Google Colab (Recommended)
-
-1. Open `notebooks/01_data_analysis.ipynb` → explore the dataset and analyze the results are available in data_analysis folder
-2. Open `notebooks/02_train.ipynb` → set `MODEL_NAME`, train
-3. Open `notebooks/03_evaluate.ipynb` → evaluate each model, + compare all models
+1. Open `01_data_analysis.ipynb` → explore the dataset and analyze the results are available in data_analysis folder
+2. Open `02_train.ipynb` → set `MODEL_NAME`, train
+3. Open `03_evaluate.ipynb` → evaluate each model, + compare all models
 
 Each notebook is **self-contained** — it clones the repo and imports `.py` modules automatically.
 
@@ -95,16 +99,19 @@ MODEL_REGISTRY = {
     "your_model":   YourModel,          # ← add here
 }
 ```
-
 3. Use it: `python train.py --model your_model`
+
+### Task 2: Visual Language Models (Report Generation)
+To run Task 2 in Colab:
+You need a Hugging Face access token to use gated models such as MedGemma.
+Generate a token from your Hugging Face account settings.
+Store the token securely in Colab Secrets to avoid exposing it in plain text.
+A script for token registration is already included in the notebook, so authentication is handled automatically during runtime.
 
 ### Results
 See Task1 and Task2 reports
 
 ---
 
-## References
-
+## Dataset Reference
 - Yang et al., "MedMNIST v2," Scientific Data, 2023.
-- Tan & Le, "EfficientNet," ICML 2019.
-- He et al., "Deep Residual Learning for Image Recognition," CVPR 2016.
