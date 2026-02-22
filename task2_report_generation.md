@@ -1,8 +1,8 @@
-# Task 2: Medical Report Generation using Visual Language Model
+# Task 2: Medical Report Generation using VLM
 ## Postdoctoral Technical Challenge — AlfaisalX / MedX Research Unit
 
-**Author:** [Your Name]
-**Date:** February 21, 2026
+**Author:** Irshad Khan
+
 **Model Used:** LLaVA-1.5-7B
 **Dataset:** PneumoniaMNIST (test split, 12 representative images)
 
@@ -24,9 +24,9 @@
 | Model | Reason Not Selected |
 |-------|--------------------|
 | GPT-4V | Commercial API, cost per image, not open-source |
-| LLaVA-Med | Older architecture, less maintained |
 | CheXagent | Excellent but requires significant VRAM (>24GB) |
-| BioViL-T | Text-generation capability limited vs full VLMs |
+| BioViL-T  | Text-generation capability limited vs full VLMs |
+|MedGemma‑4B|	Attempted, but initial runs failed to resolve the model config. For reproducibility and ease of use, LLaVA was chosen instead.
 
 ---
 
@@ -60,7 +60,7 @@ DIAGNOSIS: [Normal / Pneumonia / Uncertain]
 REASONING: [explain key features driving your diagnosis]
 LIMITATION: [note any limitations due to image quality]
 ```
-**Effectiveness:** Best overall quality. By explicitly naming the radiological features to inspect (opacity, air bronchograms, pleural effusion, cardiomegaly), the model produces more specific and actionable observations. The REASONING section is particularly valuable as it reveals whether the model's logic is clinically sound or coincidentally correct.
+**Effectiveness:** Best overall quality. The model produces more specific and actionable observations. The REASONING section is particularly valuable as it reveals whether the model's logic is clinically sound or coincidentally correct.
 
 ### Strategy Comparison Summary
 
