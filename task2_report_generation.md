@@ -1,5 +1,4 @@
 # Task 2: Medical Report Generation using VLM
-## Postdoctoral Technical Challenge — AlfaisalX / MedX Research Unit
 
 **Author:** Irshad Khan
 
